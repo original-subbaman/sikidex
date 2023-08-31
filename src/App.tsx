@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import { Post as PostModel } from "./models/post";
+import Post from "./components/post";
+import { Container, Row } from "react-bootstrap";
 
 function App() {
+  const [posts, setPosts] = useState<PostModel[]>([]);
+  useEffect(() => {
+    const postList = [
+      new PostModel(
+        "1",
+        "First  Post",
+        "This is the first post",
+        "siki",
+        "31/08/2023"
+      ),
+      new PostModel(
+        "2",
+        "Second Post",
+        "This is the second post",
+        "siki",
+        "31/08/2023"
+      ),
+    ];
+    setPosts(postList);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Row xs={1} md={2} lg={4}>
+        {posts.map((post) => (
+          <Post post={post} />
+        ))}
+      </Row>
+    </Container>
   );
 }
 
