@@ -1,5 +1,11 @@
 .postCard {
-  background-color: beige;
+  background-color: #64CCC5;
+  color: white;
+}
+
+.cardBody{
+  overflow: hidden;
+  mask-image: linear-gradient(180deg, #000 60%, transparent);
 }
 
 .cardText {
