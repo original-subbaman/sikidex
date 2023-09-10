@@ -6,6 +6,9 @@ import styles from "./styles/PostPage.module.css";
 import { formatDate } from "./utils/formatDate";
 import CustomNav from "./components/navbar";
 import Cover from "./cover.jpeg";
+import SearchBar from "./components/search_bar";
+import SearchContainer from "./components/search_container";
+import { SubTitle } from "./components/subtitle";
 
 function App() {
   const [posts, setPosts] = useState<PostModel[]>([]);
@@ -89,9 +92,21 @@ function App() {
 
   
 
+  
+
   return (
     <Container>
       <CustomNav />
+      <SearchContainer />
+      <SubTitle title= {"Upcoming events in the next 3 days"} />
+      <Row xs={1} md={2} lg={4} className="g-4">
+        {posts.map((post) => (
+          <Col>
+            <Post post={post} className={styles.note}/>
+          </Col>
+        ))}
+      </Row>
+      <SubTitle title= {"Upcoming events in the next few weeks"} />
       <Row xs={1} md={2} lg={4} className="g-4">
         {posts.map((post) => (
           <Col>

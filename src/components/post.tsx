@@ -17,6 +17,7 @@ const Post = ({ post, className}: PostProps) => {
   }else{
     createdUpdatedText = "Created: " + formatDate(createdAt);
   }
+  
   return (
     <Card className={`${styles.postCard} ${className}`}>
       <Card.Img variant="top" src={cover} />

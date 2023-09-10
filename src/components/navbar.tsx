@@ -1,7 +1,9 @@
 import { Navbar, Nav, Container, NavItem, NavDropdown } from "react-bootstrap";
 
+
 const CustomNav = () => {
-    return <Navbar>
+
+    return <Navbar className="navbar-dark py-2" sticky="top">
          <Container>
         <Navbar.Brand href="#">SikiDex</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
