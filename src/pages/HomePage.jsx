@@ -1,12 +1,35 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import NewEventSection from "../components/NewEventSection";
+import AddEventInput from "../components/AddEventInput";
+import AddEvent from "../components/AddEvent";
+import Modal from "../components/Modal";
 function HomePage(props) {
+  const modalRef = useRef();
+  function handleAddNewEvent() {
+    modalRef.current.open();
+  }
+
+  function handleCloseModal() {
+    console.log("close modal");
+    modalRef.current.close();
+  }
+
   return (
-    <div className="w-full flex flex-col items-center justify-center mt-4">
-      <SearchBar />
-      <NewEventSection />
-    </div>
+    <>
+      <Modal ref={modalRef}>
+        <AddEvent onCancel={handleCloseModal} />
+      </Modal>
+      <div className="w-full flex flex-col items-center justify-center mt-4">
+        <div className="flex my-4 w-1/2 gap-4">
+          <div className="grow-2">
+            <SearchBar />
+          </div>
+          <AddEventInput onClick={handleAddNewEvent} />
+        </div>
+        <NewEventSection />
+      </div>
+    </>
   );
 }
 

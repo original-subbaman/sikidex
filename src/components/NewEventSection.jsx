@@ -3,7 +3,7 @@ import { ExampleEvents } from "../utils/example_data";
 import Event from "./Event";
 function NewEventSection(props) {
   return (
-    <div className="flex flex-col p-4 rounded-md w-10/12">
+    <div className="flex flex-col p-4 rounded-md w-10/12 md:min-h-[500px]">
       <h1 className="text-white text-start font-bold text-2xl">
         New Event Section
       </h1>
