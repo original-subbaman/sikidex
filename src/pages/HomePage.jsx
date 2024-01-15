@@ -21,11 +21,8 @@ function HomePage(props) {
         <AddEvent onCancel={handleCloseModal} />
       </Modal>
       <div className="w-full flex flex-col items-center justify-center mt-4">
-        <div className="flex my-4 w-1/2 gap-4">
-          <div className="grow-2">
-            <SearchBar />
-          </div>
-          <AddEventInput onClick={handleAddNewEvent} />
+        <div className="flex justify-center my-4 w-1/2 gap-4">
+          <SearchBar />
         </div>
         <NewEventSection />
       </div>
