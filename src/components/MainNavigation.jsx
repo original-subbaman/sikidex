@@ -5,6 +5,7 @@ function MainNavigation(props) {
   return (
     <header className="h-24 drop-shadow-lg sticky top-0 z-50">
       <div className="flex items-center bg-gradient-to-r from-[#16bac5] to-[#5863f8] h-full">
+        <div></div>
         <Link to="/" className="flex-1">
           <h1 className="text-5xl font-extrabold text-white text-center">
             SikiDex
