@@ -2,7 +2,7 @@ import React from "react";
 import { FaSearch } from "react-icons/fa";
 function SearchBar(props) {
   return (
-    <form className="min-w-[600px]">
+    <form className="min-w-[300px] md:min-w-[600px]">
       <div className="relative">
         <div className="bg-gradient-to-r  from-purple-500 via-green-500-500 to-cyan-500 rounded-full p-1">
           <input

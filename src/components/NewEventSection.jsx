@@ -7,7 +7,7 @@ function NewEventSection(props) {
       <h1 className="text-white text-start font-bold text-3xl">
         New Event Section
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 rounded-md drop-shadow-md ">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-4 rounded-md drop-shadow-md ">
         {ExampleEvents.map((event) => (
           <Event event={event} key={event.id} />
         ))}

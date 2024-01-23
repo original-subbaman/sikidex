@@ -3,30 +3,29 @@ import image from "../assets/rainforest.jpg";
 import { BsCalendarDate } from "react-icons/bs";
 import { IoTimeOutline, IoLocationSharp } from "react-icons/io5";
 import { CiBookmark } from "react-icons/ci";
+import Button from "../components/Button";
 function PostDetail(props) {
   return (
-    <div className="container mx-auto rounded-md my-4">
+    <div className="md:container mx-auto  rounded-md md:my-4 md:px-10 h-screen  md:h-full">
       <img
         src={image}
         alt="image"
-        className="bg-white md:max-h-[400px] lg:max-h-[300px] object-cover w-full rounded-t-lg"
+        className="bg-white max-h-[200px] md:max-h-[300px] lg:max-h-[350px] object-cover w-full md:rounded-t-lg"
       />
-      <div className="text-white mt-4">
+      <div className=" text-white rounded-b-lg bg-[#171d1c] p-2 h-full">
         <div className="flex justify-between">
-          <h1 className="text-5xl font-bold">title</h1>
+          <h1 className="text-5xl font-bold mb-2">title</h1>
           <div className="flex gap-4">
-            <button className="border border-white rounded px-2 max-h-10">
+            <Button>
               <CiBookmark />
-            </button>
-            <button className="border border-white rounded px-2 max-h-10">
-              Join
-            </button>
+            </Button>
+            <Button>Join</Button>
           </div>
         </div>
         <p className="tracking-wide text-lg font-semibold flex items-center gap-2">
           <BsCalendarDate /> 22-01-2024 || <IoTimeOutline /> 10:00 PM
         </p>
-        <p className="tracking-wide text-lg font-semibold flex items-center">
+        <p className="tracking-wide text-lg font-semibold flex items-center my-4">
           <IoLocationSharp />
           Deorali Govt CollegeS
         </p>
