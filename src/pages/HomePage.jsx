@@ -1,17 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import NewEventSection from "../components/NewEventSection";
-import AddEventInput from "../components/AddEventInput";
 import AddEvent from "../components/AddEvent";
+import { addPost } from "../firebase/firestore_service";
 import Modal from "../components/Modal";
 function HomePage(props) {
   const modalRef = useRef();
-  function handleAddNewEvent() {
-    modalRef.current.open();
-  }
 
   function handleCloseModal() {
-    console.log("close modal");
     modalRef.current.close();
   }
 
