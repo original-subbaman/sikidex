@@ -1,6 +1,6 @@
 import React from "react";
 
-function Input({ label, name, type, ...props }) {
+function Input({ label, name, type, error, ...props }) {
   return (
     <div className="flex flex-col">
       <label htmlFor={name} className="font-semibold text-lg">
